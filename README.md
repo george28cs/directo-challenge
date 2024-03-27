@@ -23,3 +23,20 @@ This project is an application developed with NestJS to process numbers and retu
 
 5. **The application will be available at http://localhost:3000.**
 
+6. **Test endpoint**
+Method: POST
+URL: http://localhost:3000/challenge
+PAYLOAD:
+```JSON
+{
+    "number": 19
+}
+```
+6. **Run tests**
+
+```
+docker run directo-challenge npm test
+```
+
+
+
