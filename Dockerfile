@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Bundle .env file
-COPY .env .env.development ./
+COPY .env.development ./
 
 # Creates a "dist" folder with the production build
 RUN npm run build
