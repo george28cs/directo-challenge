@@ -72,18 +72,21 @@ export class ChallengeService {
     return factors;
   }
 
-  calculateFibonacci(num: number, memo: number[] = []): number {
-    if (memo[num] !== undefined) {
-      return memo[num];
-    }
-
+  calculateFibonacci(num: number): number {
     if (num <= 1) {
       return num;
     }
 
-    memo[num] =
-      this.calculateFibonacci(num - 1, memo) +
-      this.calculateFibonacci(num - 2, memo);
-    return memo[num];
+    let a = 0;
+    let b = 1;
+    let temp: number;
+
+    for (let i = 2; i <= num; i++) {
+      temp = a + b;
+      a = b;
+      b = temp;
+    }
+
+    return b;
   }
 }
